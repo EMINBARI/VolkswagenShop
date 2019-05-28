@@ -17,6 +17,7 @@
                 <h3 class="name">Volkswagen Golf</h3>
                 <p class="description">20 000$</p>
             </div>
+
         </div>
 
         <hr>

@@ -61,3 +61,8 @@ Route::group(['middleware' => ['auth', 'admin']], function(){
 Route::get('/home', function(){
     return view('pages.index');
 });
+
+
+
+
+Route::resource('models.models', 'CarModelsController');
