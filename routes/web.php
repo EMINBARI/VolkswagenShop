@@ -56,13 +56,13 @@ Route::group(['middleware' => ['auth', 'admin']], function(){
 
 Route::group(['middleware' => ['auth', 'admin']], function(){
     Route::get('/admin', 'DashboardController@adminPage');
+   
 });
 
 Route::get('/home', function(){
-    return view('pages.index');
+    return view('/');
 });
 
+Route::resource('/models/models', 'CarModelsController');
 
-
-
-Route::resource('models.models', 'CarModelsController');
+Route::get('/models/testDriveForm','CarModelsController@isAuth');

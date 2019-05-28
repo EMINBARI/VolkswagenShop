@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
+
+use App\CarModel;
 
 class PagesController extends Controller
 {
@@ -35,4 +38,6 @@ class PagesController extends Controller
         return view('pages.technologies')->with('title',$title);
         
     }
+
+    
 }

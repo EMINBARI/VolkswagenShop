@@ -24,8 +24,13 @@
                     </div>
                     
                     <div class="col-lg-12 col-sm-12 justify-content-center align-items-center">
-                        <a href="/" class="btn btn-primary" style="width:100%">GO DRA TEST</a>
+                        <a href="/models/testDriveForm" class="btn btn-secondary" style="width:100%">GO DRA</a>
                     </div>
+                    <div class="container" style="height:10px"></div>
+                    <div class="col-lg-12 col-sm-12 justify-content-center align-items-center">
+                        <a href="/models/models" class="btn btn-secondary" style="width:100%">← GO back</a>
+                    </div>
+                    
                 </div>
             <div class="col-lg-8 col-sm-12"><img class="img-fluid" src="{{$car->img}}" alt="{{$car->model_name}}"></div>
                 

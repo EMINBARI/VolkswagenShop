@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\CarModel;
-use Illuminate\Support\Facades\Auth;
 
-class CarModelsController extends Controller
+class TestDriveController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +13,7 @@ class CarModelsController extends Controller
      */
     public function index()
     {
-        $models = CarModel::all();
-        //$golf_models = CarModel::where('model_name','golf')->get();
-        return view('models.models')->with('models', $models);
+        //
     }
 
     /**
@@ -49,8 +45,7 @@ class CarModelsController extends Controller
      */
     public function show($id)
     {
-        $car = CarModel::find($id);
-        return view('models.show')->with('car', $car);
+        //
     }
 
     /**
@@ -86,16 +81,4 @@ class CarModelsController extends Controller
     {
         //
     }
-
-    public function isAuth(){
-        $authenticated = false;
-        if(Auth::check()){
-            $authenticated = true;
-        }
-
-        return view('/models/testDriveForm')->with('authenticated', $authenticated);
-        
-    }
-
-
 }
