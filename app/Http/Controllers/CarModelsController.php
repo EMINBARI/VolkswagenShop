@@ -48,7 +48,8 @@ class CarModelsController extends Controller
      */
     public function show($id)
     {
-        //
+        $car = CarModel::find($id);
+        return view('models.models.show')->with('car', $car);
     }
 
     /**

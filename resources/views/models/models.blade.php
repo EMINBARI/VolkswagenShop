@@ -26,7 +26,7 @@
                                     <div class="col-lg-4 col-sm-12"><p class="description">{{$item->transmission}}</p></div>                          
                                 </div>
                                 <div class=" row container-fluid justify-content-center align-items-center">
-                                    <div class="col-lg-5 col-sm-12"><a href="/" class="btn btn-dark" style="width:100%">More</a></div>                            
+                                <div class="col-lg-5 col-sm-12"><a href="/models/models/{{$item->id}}" class="btn btn-dark" style="width:100%">More</a></div>                            
                                 </div>
 
                             </div>
