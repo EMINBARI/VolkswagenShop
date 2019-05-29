@@ -9,7 +9,7 @@
     </div>
     <hr>
     <div class="container" style="height: 50px;"></div>
-
+    {{/**/}}
     @if ($authenticated == false)
         
         <div class="row projects justify-content-center align-items-center">
@@ -35,22 +35,8 @@
 
     @else
 
-        <div class="container-fluid">
-            {!! Form::open(['action'=>'TestDriveController@store', 'method' => 'POST']) !!}
-                <div class="form-group">
-                    {{Form::label('title','Label Title')}}
-                    {{Form::text('title','',['class' => 'form-control', 'placeholder' => 'some text'])}}
-                </div>
-
-            
-                <div class="form-group">
-                    {{Form::label('body','Body')}}
-                    {{Form::textarea('body','',['id' =>'article-ckeditor','class' => 'form-control', 'placeholder' => 'Body text'])}}
-                </div>
-
-                {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
-            {!! Form::close() !!}
-        </div>
+        <div>Hello!</div>
+        
 
     @endif
 

@@ -63,8 +63,8 @@ Route::get('/home', function(){
     return view('/');
 });
 
-Route::resource('/models/models', 'CarModelsController');
+Route::resource('/models', 'CarModelsController');
 
-Route::get('/models/testDriveForm','CarModelsController@isAuth');
+//Route::get('models/testDriveForm','TestDriveController@index');
 
 Route::get('/admin/index','DashboardController@adminPage');

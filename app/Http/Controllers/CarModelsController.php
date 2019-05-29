@@ -87,15 +87,7 @@ class CarModelsController extends Controller
         //
     }
 
-    public function isAuth(){
-        $authenticated = false;
-        if(Auth::check()){
-            $authenticated = true;
-        }
-
-        return view('/models/testDriveForm')->with('authenticated', $authenticated);
-        
-    }
+    
 
 
 }

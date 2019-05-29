@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TestDriveController extends Controller
 {
@@ -13,7 +14,14 @@ class TestDriveController extends Controller
      */
     public function index()
     {
-        //
+        
+        $authenticated = false;
+        if(Auth::check()){
+            $authenticated = true;
+        }
+        
+
+        return view('/models/testDriveForm')->with('authenticated', $authenticated);
     }
 
     /**
