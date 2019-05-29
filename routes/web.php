@@ -64,7 +64,6 @@ Route::get('/home', function(){
 });
 
 Route::resource('/models', 'CarModelsController');
-
-//Route::get('models/testDriveForm','TestDriveController@index');
+Route::resource('/testDrive', 'TestDriveController');
 
 Route::get('/admin/index','DashboardController@adminPage');

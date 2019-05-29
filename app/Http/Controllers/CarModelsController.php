@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\CarModel;
 use Illuminate\Support\Facades\Auth;
 
+
 class CarModelsController extends Controller
 {
     /**
@@ -17,7 +18,7 @@ class CarModelsController extends Controller
     {
         $models = CarModel::all();
         //$golf_models = CarModel::where('model_name','golf')->get();
-        return view('models.models')->with('models', $models);
+        return view('models.index')->with('models', $models);
     }
 
     /**
@@ -47,10 +48,14 @@ class CarModelsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request, $id)
     {
+        
+        $request->session()->put('key',$id);
         $car = CarModel::find($id);
+
         return view('models.show')->with('car', $car);
+
     }
 
     /**

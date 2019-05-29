@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+use App\CarModel;
+use App\TestDrive;
+
 class TestDriveController extends Controller
 {
     /**
@@ -12,16 +15,23 @@ class TestDriveController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         
         $authenticated = false;
         if(Auth::check()){
             $authenticated = true;
         }
-        
+        $modelId = $request->session()->get('key','Не найдена модель');
+        $car = CarModel::find($modelId);
 
-        return view('/models/testDriveForm')->with('authenticated', $authenticated);
+        $data = array(
+            'authenticated' => $authenticated,
+            'car' => $car
+        );
+       
+        
+        return view('testDrive.index')->with($data);
     }
 
     /**
@@ -42,7 +52,22 @@ class TestDriveController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'password' => 'required',
+        ]);
+
+        $modelId = $request->session()->get('key','Не найдена модель');
+        $car = CarModel::find($modelId);
+
+        
+        $drtest = new TestDrive;
+        $drtest->model_id = $car->id;
+        $drtest->user_id = auth()->user()->id;;
+        $drtest->test_drive_date = '2019-05-31 8:15:00';
+        $drtest->save();
+
+        return redirect('/models');
+
     }
 
     /**
