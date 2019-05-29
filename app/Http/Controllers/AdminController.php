@@ -18,7 +18,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        //
+        //Return some
     }
 
     /**

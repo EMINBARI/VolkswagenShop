@@ -66,3 +66,5 @@ Route::get('/home', function(){
 Route::resource('/models/models', 'CarModelsController');
 
 Route::get('/models/testDriveForm','CarModelsController@isAuth');
+
+Route::get('/admin/index','DashboardController@adminPage');

@@ -102,10 +102,8 @@
                                         @csrf
                                     </form>
 
-                                    <a href="/dashboard" class="btn btn-light">Dashboard</a>
-                                    @if (Auth::user()->is_admin == 1)
-                                        <a href="/dashboard" class="btn btn-light">Admin</a>
-                                    @endif
+                                    <a  style="width:100%" href="/dashboard" class="btn btn-light">Dashboard</a>
+                                    <a style="width:100%" href="/admin" class="btn btn-light">Admin panel</a>
                                 </div>
                             </li>
                             
