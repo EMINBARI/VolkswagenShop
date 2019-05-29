@@ -32,7 +32,7 @@ class DashboardController extends Controller
 
     public function adminPage(){
         if(auth()->user()->is_admin){
-            return 'haha';
+            return view('admin.index');
         }
     }
 }
