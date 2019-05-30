@@ -18,7 +18,9 @@ class AdminCarModelsController extends Controller
      */
     public function index()
     {
-        return view('admin.adminCarModels.index');
+        //$models = CarModel::all();
+        $models = CarModel::orderBy('id','desc')->paginate(5);
+        return view('admin.adminCarModels.index')->with('models', $models);
     }
 
     /**
@@ -28,7 +30,7 @@ class AdminCarModelsController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.adminCarModels.create');
     }
 
     /**
@@ -39,7 +41,34 @@ class AdminCarModelsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'vin'=>'required',
+            'model'=>'required',
+            'type'=>'required',
+            'year'=>'required',
+            'transmission'=>'required',
+            'engine'=>'required',
+            'color'=>'required',
+            'equipment'=>'required',
+            'price'=>'required',
+            'image'=>'required',
+        ]);
+
+        $model = new CarModel;
+        $model->vin = $request->input('vin');
+        $model->model_name = $request->input('model');
+        $model->model_type = $request->input('type');
+        $model->year = $request->input('year');
+        $model->transmission = $request->input('transmission');
+        $model->engine = $request->input('engine');
+        $model->color = $request->input('color');
+        $model->equipment = $request->input('equipment');
+        $model->price = $request->input('price');
+        $model->img = $request->input('image');
+        $model->save();
+
+        return redirect('admin/adminCarModels/create')->with('success', 'model added)');
+
     }
 
     /**
