@@ -12,11 +12,11 @@
             <div class="row projects justify-content-center align-items-center">
                 <div class=" row col-lg-4 col-sm-12 justify-content-center">
                     <div class="col-lg-12 col-sm-12">
-                        <p>Engine : {{$car->engine}}</p> <hr>
-                        <p>Transmission : {{$car->transmission}}</p> <hr>
-                        <p>Year : {{$car->year}}</p> <hr>
-                        <p>Equipment : {{$car->equipment}}</p> <hr>
-                        <p>Color : {{$car->color}}</p> <hr>
+                        <p>{{trans('main.Engine')}} : {{$car->engine}}</p> <hr>
+                        <p>{{trans('main.Transmission')}} : {{$car->transmission}}</p> <hr>
+                        <p>{{trans('main.Year')}} : {{$car->year}}</p> <hr>
+                        <p>{{trans('main.Equipment')}} : {{$car->equipment}}</p> <hr>
+                        <p>{{trans('main.Color')}} : {{$car->color}}</p> <hr>
                     </div>
                     <div class="col-lg-12 col-sm-12">
                         <p>Price: {{$car->price}}$</p>

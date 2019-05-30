@@ -19,11 +19,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="/">Home</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="/models">Models</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="/technologies">Technologies</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="/about">About</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="/services">News</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/">{{trans('main.Home')}}</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/models">{{trans('main.Models')}}</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/technologies">{{trans('main.Technologies')}}</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/about">{{trans('main.About')}}</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/services">{{trans('main.News')}}</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

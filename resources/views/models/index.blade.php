@@ -6,7 +6,7 @@
 
             <div class="row projects justify-content-center align-items-center" style="height:30px"></div>
             <div class="row projects justify-content-center align-items-center">
-              <h2 class="text-center">Hatchback</h2>
+              <h2 class="text-center">{{trans('main.Hatchback')}}</h2>
             </div>
 
             
@@ -26,7 +26,7 @@
                                     <div class="col-lg-4 col-sm-12"><p class="description">{{$item->transmission}}</p></div>                          
                                 </div>
                                 <div class=" row container-fluid justify-content-center align-items-center">
-                                <div class="col-lg-5 col-sm-12"><a href="/models/{{$item->id}}" class="btn btn-dark" style="width:100%">More</a></div>                            
+                                <div class="col-lg-5 col-sm-12"><a href="/models/{{$item->id}}" class="btn btn-dark" style="width:100%">{{trans('main.More')}}</a></div>                            
                                 </div>
 
                             </div>
@@ -38,7 +38,7 @@
                 <hr>
 
                 <div class="row projects justify-content-center align-items-center">
-                    <h2 class="text-center">Sedan</h2>
+                    <h2 class="text-center">{{trans('main.Sedan')}}</h2>
                 </div>
 
 
@@ -56,7 +56,7 @@
                                     <div class="col-lg-4 col-sm-12"><p class="description">{{$item->transmission}}</p></div>                          
                                 </div>
                                 <div class=" row container-fluid justify-content-center align-items-center">
-                                    <div class="col-lg-5 col-sm-12"><a href="/models/{{$item->id}}" class="btn btn-dark" style="width:100%">More</a></div>                            
+                                <div class="col-lg-5 col-sm-12"><a href="/models/{{$item->id}}" class="btn btn-dark" style="width:100%">{{trans('main.More')}}</a></div>                            
                                 </div>
 
                             </div>
@@ -81,7 +81,7 @@
                                     <div class="col-lg-4 col-sm-12"><p class="description">{{$item->transmission}}</p></div>                          
                                 </div>
                                 <div class=" row container-fluid justify-content-center align-items-center">
-                                    <div class="col-lg-5 col-sm-12"><a href="/models/{{$item->id}}" class="btn btn-dark" style="width:100%">More</a></div>                            
+                                    <div class="col-lg-5 col-sm-12"><a href="/models/{{$item->id}}" class="btn btn-dark" style="width:100%">{{trans('main.More')}}</a></div>                            
                                 </div>
 
                             </div>
@@ -106,7 +106,7 @@
                                     <div class="col-lg-4 col-sm-12"><p class="description">{{$item->transmission}}</p></div>                          
                                 </div>
                                 <div class=" row container-fluid justify-content-center align-items-center">
-                                    <div class="col-lg-5 col-sm-12"><a href="/models/{{$item->id}}" class="btn btn-dark" style="width:100%">More</a></div>                            
+                                    <div class="col-lg-5 col-sm-12"><a href="/models/{{$item->id}}" class="btn btn-dark" style="width:100%">{{trans('main.More')}}</a></div>                            
                                 </div>
 
                             </div>
@@ -120,7 +120,7 @@
                 <hr>
 
                 <div class="row projects justify-content-center align-items-center">
-                    <h2 class="text-center">SUV</h2>
+                <h2 class="text-center">{{trans('main.SUV')}}</h2>
                 </div>
                
                 
@@ -138,7 +138,7 @@
                                     <div class="col-lg-4 col-sm-12"><p class="description">{{$item->transmission}}</p></div>                          
                                 </div>
                                 <div class=" row container-fluid justify-content-center align-items-center">
-                                    <div class="col-lg-5 col-sm-12"><a href="/models/{{$item->id}}" class="btn btn-dark" style="width:100%">More</a></div>                            
+                                    <div class="col-lg-5 col-sm-12"><a href="/models/{{$item->id}}" class="btn btn-dark" style="width:100%">{{trans('main.More')}}</a></div>                            
                                 </div>
 
                             </div>
@@ -164,7 +164,7 @@
                                     <div class="col-lg-4 col-sm-12"><p class="description">{{$item->transmission}}</p></div>                          
                                 </div>
                                 <div class=" row container-fluid justify-content-center align-items-center">
-                                    <div class="col-lg-5 col-sm-12"><a href="/models/{{$item->id}}" class="btn btn-dark" style="width:100%">More</a></div>                            
+                                    <div class="col-lg-5 col-sm-12"><a href="/models/{{$item->id}}" class="btn btn-dark" style="width:100%">{{trans('main.More')}}</a></div>                            
                                 </div>
 
                             </div>
@@ -189,7 +189,7 @@
                                     <div class="col-lg-4 col-sm-12"><p class="description">{{$item->transmission}}</p></div>                          
                                 </div>
                                 <div class=" row container-fluid justify-content-center align-items-center">
-                                    <div class="col-lg-5 col-sm-12"><a href="/models/{{$item->id}}" class="btn btn-dark" style="width:100%">More</a></div>                            
+                                    <div class="col-lg-5 col-sm-12"><a href="/models/{{$item->id}}" class="btn btn-dark" style="width:100%">{{trans('main.More')}}</a></div>                            
                                 </div>
 
                             </div>
