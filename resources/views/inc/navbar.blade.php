@@ -73,6 +73,8 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <a href="/setlocale/ru" class="ml-1">RU</a>
+                        <a href="/setlocale/en" class="ml-1">EN</a>
                       
                         <!-- Authentication Links -->
                         @guest
