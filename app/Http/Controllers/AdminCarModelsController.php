@@ -90,7 +90,8 @@ class AdminCarModelsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $car = CarModel::find($id);
+        return view('admin/adminCarModels/edit')->with('car',$car);
     }
 
     /**
@@ -102,7 +103,34 @@ class AdminCarModelsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'vin'=>'required',
+            'model'=>'required',
+            'type'=>'required',
+            'year'=>'required',
+            'transmission'=>'required',
+            'engine'=>'required',
+            'color'=>'required',
+            'equipment'=>'required',
+            'price'=>'required',
+            'image'=>'required',
+        ]);
+
+        $model = CarModel::find($id);
+        $model->vin = $request->input('vin');
+        $model->model_name = $request->input('model');
+        $model->model_type = $request->input('type');
+        $model->year = $request->input('year');
+        $model->transmission = $request->input('transmission');
+        $model->engine = $request->input('engine');
+        $model->color = $request->input('color');
+        $model->equipment = $request->input('equipment');
+        $model->price = $request->input('price');
+        $model->img = $request->input('image');
+        $model->save();
+
+        return redirect('admin/adminCarModels/create')->with('success', 'model updated)');
+
     }
 
     /**
@@ -113,6 +141,9 @@ class AdminCarModelsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $car = CarModel::find($id);
+        $car->delete();
+
+        return redirect('admin/adminCarModels')->with('success', 'model deleted)');
     }
 }

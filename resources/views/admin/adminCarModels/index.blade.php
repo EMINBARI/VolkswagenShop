@@ -35,11 +35,17 @@
 
                     <div class="col-lg-2 col-sm-12 row">
                         <div class="col-lg-12 col-sm-12">
-                            <a href="" style="width:100%" class="btn btn-success">Edit</a>
+                        <a href="/admin/adminCarModels/{{$item->id}}/edit" style="width:100%" class="btn btn-success">Edit</a>
                         </div>
                         <div class="col-lg-12 col-sm-12">
-                            <a href="" style="width:100%" class="btn btn-danger">Delete</a>
+                            {!!Form::open(['action' => ['AdminCarModelsController@destroy', $item->id], 'method' => 'POST', 'class' => 'pull-right']) !!}
+    
+                                {{Form::hidden('_method', 'DELETE')}}
+                                {{Form::submit('Delete',['class' => 'btn btn-danger', 'style'=>'width:100%;'])}}
+                        
+                            {!!Form::close()!!}
                         </div>
+                        
                         
                         
                     </div>

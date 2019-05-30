@@ -24,7 +24,7 @@
                     </div>
                     
                     <div class="col-lg-12 col-sm-12 justify-content-center align-items-center">
-                        <a href="/models/testDriveForm" class="btn btn-secondary" style="width:100%">GO DRA</a>
+                        <a href="/testDrive" class="btn btn-secondary" style="width:100%">GO DRA</a>
                     </div>
                     <div class="container" style="height:10px"></div>
                     <div class="col-lg-12 col-sm-12 justify-content-center align-items-center">
