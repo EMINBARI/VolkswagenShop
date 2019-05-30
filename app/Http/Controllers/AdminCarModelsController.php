@@ -9,7 +9,7 @@ use App\User;
 use App\Post;
 use Illuminate\Support\Facades\Auth;
 
-class AdminController extends Controller
+class AdminCarModelsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,7 +18,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        //Return some
+        return view('admin.adminCarModels.index');
     }
 
     /**

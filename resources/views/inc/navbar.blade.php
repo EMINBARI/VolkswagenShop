@@ -92,7 +92,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <a class="dropdown-item" style="width:100%; text-align:center;" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
@@ -102,9 +102,9 @@
                                         @csrf
                                     </form>
 
-                                    <a href="/dashboard" class="btn btn-light">Dashboard</a>
+                                    <a href="/dashboard" style="width:100%" class="btn btn-light">Dashboard</a>
                                     @if (Auth::user()->is_admin == 1)
-                                        <a href="/dashboard" class="btn btn-light">Admin</a>
+                                        <a href="/admin" class="btn btn-primary" style="width:100%">Admin</a>
                                     @endif
                                 </div>
                             </li>

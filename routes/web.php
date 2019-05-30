@@ -56,6 +56,11 @@ Route::group(['middleware' => ['auth', 'admin']], function(){
 
 Route::group(['middleware' => ['auth', 'admin']], function(){
     Route::get('/admin', 'DashboardController@adminPage');
+
+    Route::resource('/admin/adminCarModels', 'AdminCarModelsController');
+    Route::resource('/admin/adminTestDrive', 'AdminTestDriveController');
+    Route::resource('/admin/adminUsers', 'AdminUsersController');
+
    
 });
 
