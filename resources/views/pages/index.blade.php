@@ -2,7 +2,7 @@
 
 @section('content')
     
-    <h1>{{$title}}<h1>
+    
     @include('inc.carousel')
 
     <div class="projects-clean">

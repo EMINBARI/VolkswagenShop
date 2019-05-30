@@ -10,11 +10,10 @@ use App\CarModel;
 class PagesController extends Controller
 {
     public function index(){
-        $title = 'New Volkswagen models';
-
+        
         //return view('pages.index', compact('title'));
         //or we can use this below
-        return view('pages.index')->with('title', $title);
+        return view('pages.index');
     }
 
     public function about(){

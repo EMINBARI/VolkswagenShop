@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 use App\CarModel;
 use App\TestDrive;
+use Hash;
 
 class TestDriveController extends Controller
 {
@@ -59,15 +60,21 @@ class TestDriveController extends Controller
 
         $modelId = $request->session()->get('key','Не найдена модель');
         $car = CarModel::find($modelId);
+        $password = $request->input('password');
+        $hashedPassword=auth()->user()->password;
+        if (Hash::check($password, $hashedPassword)) {
 
-        
-        $drtest = new TestDrive;
-        $drtest->model_id = $car->id;
-        $drtest->user_id = auth()->user()->id;;
-        $drtest->test_drive_date = '2019-05-31 8:15:00';
-        $drtest->save();
+            $drtest = new TestDrive;
+            $drtest->model_id = $car->id;
+            $drtest->user_id = auth()->user()->id;
+            $drtest->test_drive_date = '2019-05-31 8:15:00';
+            $drtest->save();
 
-        return redirect('/models');
+            return redirect('/models')->with('success', 'model added)');
+            
+        }
+            
+        return redirect('/models')->with('error', 'model not added)');
 
     }
 

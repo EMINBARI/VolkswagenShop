@@ -9,7 +9,7 @@
     </div>
     <hr>
     <div class="container" style="height: 50px;"></div>
-    
+    @include('inc.messages')
     @if ($authenticated == false)
         
         <div class="row projects justify-content-center align-items-center">
@@ -48,7 +48,13 @@
                 </div>
             </div>
             
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-6 col-sm-12">
+                    {!! app('captcha')->display() !!}
+                </div>
+            </div>
         </div>
+        
         
         {!! Form::open(['action'=> 'TestDriveController@store', 'method' => 'POST']) !!}
         

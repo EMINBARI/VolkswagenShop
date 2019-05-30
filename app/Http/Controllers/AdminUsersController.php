@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class AdminUsersController extends Controller
 {
@@ -13,7 +14,8 @@ class AdminUsersController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::orderBy('id','desc')->paginate(6);
+        return view('admin.adminUsers.index')->with('users', $users);
     }
 
     /**
@@ -56,7 +58,8 @@ class AdminUsersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        return view('admin/adminUsers/edit')->with('user',$user);
     }
 
     /**
@@ -68,7 +71,11 @@ class AdminUsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = user::find($id);
+        $user->is_admin = 1;
+        //$response =$request->input('value');
+        $user->save();
+        return redirect('admin/adminUsers')->with('success', 'model updated)');
     }
 
     /**
@@ -79,6 +86,9 @@ class AdminUsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::find($id);
+        $user->delete();
+
+        return redirect('admin/adminUsers')->with('success', 'User deleted)');
     }
 }

@@ -19,76 +19,40 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/models">Models</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/technologies">Technologies</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/about">About</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/services">News</a></li>
                     </ul>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown"
-                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Models
-                            </a>
-
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-                                
-                                <a class="dropdown-item custommakeactive" href="/models" >
-                                    All models
-                                </a>
-                                
-                                <div class="dropdown-divider"></div>
-
-                                <a class="dropdown-item" href="/models">Sedan</a>
-                                <a class="dropdown-item" href="/models">Outroader</a>
-                                <a class="dropdown-item" href="/models">Estate</a>
-                                <a class="dropdown-item" href="/models">Hatchback</a>
-
-                               
-                            </div>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link custommakeactive" href="/technologies">Technologies</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link custommakeactive" href="/about">About</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link custommakeactive" href="/services">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link custommakeactive" href="/posts">Blog</a>
-                        </li>
-
-                    </ul>
-                </div>
-
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        <a href="/setlocale/ru" class="ml-1">RU</a>
-                        <a href="/setlocale/en" class="ml-1">EN</a>
+                       <li class="nav-link">
+
+                            <a href="/setlocale/en" class=" nav-link btn btn-dark">EN</a>
+                            
+                        </li>
+                        <li class="nav-link">
+
+                            <a href="/setlocale/ru" class="nav-link btn btn-dark">RU</a>
+                            
+                        </li>
+                        
                       
                         <!-- Authentication Links -->
                         @guest
-                            <li class="nav-item">
+                            <li class="nav-link">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
-                                <li class="nav-item">
+                                <li class="nav-link">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
 
-                            <li class="nav-item dropdown">
+                            <li class="nav-link dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
@@ -112,6 +76,8 @@
                             </li>
                             
                         @endguest
+
+                        
                     </ul>
                 </div>
             </div>
