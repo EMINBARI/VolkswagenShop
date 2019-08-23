@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 use App\CarModel;
+use App\News;
 
 class PagesController extends Controller
 {
@@ -13,7 +14,9 @@ class PagesController extends Controller
         
         //return view('pages.index', compact('title'));
         //or we can use this below
-        return view('pages.index');
+        $news = News::orderBy('created_at','desc')->paginate(5);
+        
+        return view('pages.index',['news'=> $news]);
     }
 
     public function about(){

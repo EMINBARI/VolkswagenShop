@@ -2,10 +2,9 @@
 
 @section('content')
     
-    
-    @include('inc.carousel')
+    <hr>
 
-  @if (count($news)>0)
+    @if (count($news)>0)
 
         {!!
             $title = 'title_en';
@@ -46,11 +45,19 @@
                 </div>
             </div>
         </div>
-        
+        <div class="container">
+            <div class="row projects justify-content-center align-items-center">
+            <div class="col-lg-4">
+                {{$news->links()}}
+            </div>
+        </div>
+        </div>
     @else
     <p>No models found</p>
     @endif
-
+    
+    
+    <div style="height:25px"></div>
 @endsection
 
 

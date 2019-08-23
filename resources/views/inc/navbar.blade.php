@@ -23,7 +23,7 @@
                         <li class="nav-item" role="presentation"><a class="nav-link" href="/models">{{trans('main.Models')}}</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="/technologies">{{trans('main.Technologies')}}</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="/about">{{trans('main.About')}}</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="/services">{{trans('main.News')}}</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/news">{{trans('main.News')}}</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

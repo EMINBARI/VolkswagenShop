@@ -26,4 +26,8 @@ return [
     'Location'=>'Location',
     
     'Adress' => 'Mülheimer Str. 67, 51469 Bergisch Gladbach, Germany',
+
+    'News'=>'NEWS',
+    'Add_news'=>'Add news',
+    
 ];

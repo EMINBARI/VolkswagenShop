@@ -68,6 +68,8 @@
                 </div>
             </div>
         </div>
+        
     </div>
 </div>
+<div style="height:200px;" class="container-fluid"></div>
 @endsection

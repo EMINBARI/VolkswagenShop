@@ -28,7 +28,7 @@
                     </div>
                     <div class="container" style="height:10px"></div>
                     <div class="col-lg-12 col-sm-12 justify-content-center align-items-center">
-                        <a href="/models/models" class="btn btn-secondary" style="width:100%">← GO back</a>
+                        <a href="/models" class="btn btn-secondary" style="width:100%">← GO back</a>
                     </div>
                     
                 </div>
